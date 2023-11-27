@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+function Count_Text(){
+ 
+ var MyText = document.getElementById("MyText");
+ result.innerHTML = MyText.value.length;
+}
+</script>
+</head>
+<body>
+    <form [formGroup]="rigisterform" class="list-group bg-red col-5 " >
+       
+        <input type="text" formControlName="fname" placeholder="first name">
+        <input type="text" formControlName="lname" placeholder="last name">
+        <input type="text" formControlName="tell" placeholder="phone number">
+        <input  type="text" formControlName="email" placeholder="email">
+        <button class="col-2"type="button" (click)="onrigister()">register</button>
+    
+    </form>
+<br>
+<form >
+
+    <div>
+        <input type="text" (input)="OnTypeEvent($event)"  placeholder="search" class="col-2">
+    </div>
+
+    <table class="table table-bordered col-5" >
+        <tbody >
+
+    <tr *ngFor="let item of users">
+        <td >{{item.name}}</td>
+        <td >{{item.fname}}</td>
+        <td >{{item.phone}}</td>
+        <td >{{item.mail}}</td>
+    </tr>
+   
+        </tbody>
+    
+    </table>
+</form>
+  
+</body>
+</html>
