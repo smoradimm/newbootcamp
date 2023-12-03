@@ -12,13 +12,11 @@ import{ FormBuilder, FormControl ,FormGroup, FormsModule, ReactiveFormsModule} f
 
 
 export class FormforinputComponent {
-search($event: Event) {
-throw new Error('Method not implemented.');
-}
+
   constructor(private fb:FormBuilder){
 
   }
-  
+  textforsearch:any;
   rigisterform = this.fb.group({
   fname :[''],
   lname :[''],
@@ -32,7 +30,7 @@ throw new Error('Method not implemented.');
       phone:"phone number",
       mail:"mail address"
     }];
-
+   selectuser:any[]=[];
   onrigister(){
     var tempusers={
       name: this.rigisterform.value.fname,
@@ -46,10 +44,14 @@ throw new Error('Method not implemented.');
     
   }
   OnTypeEvent(e:any){
+    // if(e.target.value==" ")
+    // return this.users
+   
+   // console.log(e.target.value);
+   this.users=this.users.filter((item)=>{  return item.name==e.target.value});
+  
+    console.log(this.selectuser);
     
-    
-    console.log(e.target.value);
-    this.users.filter(({name})=>name===e.target.value);
 }
 
 

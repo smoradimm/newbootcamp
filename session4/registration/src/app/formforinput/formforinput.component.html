@@ -5,14 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <script>
-
-function Count_Text(){
- 
- var MyText = document.getElementById("MyText");
- result.innerHTML = MyText.value.length;
-}
-</script>
 </head>
 <body>
     <form [formGroup]="rigisterform" class="list-group bg-red col-5 " >
@@ -34,7 +26,7 @@ function Count_Text(){
     <table class="table table-bordered col-5" >
         <tbody >
 
-    <tr *ngFor="let item of users">
+    <tr *ngFor="let item of users " >
         <td >{{item.name}}</td>
         <td >{{item.fname}}</td>
         <td >{{item.phone}}</td>
