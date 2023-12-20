@@ -20,14 +20,13 @@ export class TelegramComponent {
   ngOnInit(): void {
     this.addItems()
     
-  }
+  } 
   errorMessage:string|null = null;
   form:FormGroup=this.formBuilder.group({
     text:["",Validators.required],
     photo:["",Validators.required],
     caption:["",Validators.required],
     button:[""],
-    
     items:this.formBuilder.array([])
   })
 

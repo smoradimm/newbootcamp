@@ -1,0 +1,75 @@
+<br>
+<form class="text-center ">
+   <div class="row ">
+  
+  <div class="col-lg-12 border border-info">
+    <div class="bg-primary">
+    first client-server application
+</div>
+    <div class="row justify-content-md-center">
+      <div class="col-8 col-sm-6 border border-info  ">
+        first player
+        <br>
+        <br>
+        <form [formGroup]="Aform">
+           <input type="text"  formControlName="name1" placeholder="first player:enter full name">
+           <br>
+           <br>
+           <button (click)="onclick1()"> first player</button>
+        </form>
+      </div>
+      <div class="col-4 col-sm-6 border border-info">
+        second player
+        <br>
+        <br>
+        <form [formGroup]="Bform">
+        <input type="text"  formControlName="name2" placeholder="second player::enter full name">
+        <br>
+        <br>
+        <button (click)="onclick2()">second player</button>
+    </form>
+      </div>
+    </div>
+  </div>
+
+</div>
+</form>
+<br>
+<br>
+<ng-template [ngIf]="towuserisregister" >
+    <div class="row text-center ">
+        <p class="bg-primary">note:first click assign to first player then the next click assign to secone player</p>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">first player</h5>
+              <br>
+              <p class="card-text">{{player1}}</p>
+              <br>
+              <p class="card-text">{{gain1}}</p>
+             
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Second player</h5>
+              <br>
+              <p class="card-text">{{player2}}</p>
+              <br>
+              <p class="card-text">{{gain2}}</p>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="text-center ">
+      <button  (click)="start()" >start</button>
+      <br>
+      <br>
+      <p class="bg-primary">{{win}}</p>
+    </div>
+ </ng-template>
