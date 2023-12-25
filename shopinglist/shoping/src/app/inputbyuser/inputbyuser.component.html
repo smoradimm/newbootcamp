@@ -1,0 +1,23 @@
+<!--  -->
+
+
+<form  [formGroup]="inputform">
+    
+     <div class="form-group lg-3 mb-2 form-inline">
+       <label for="inputPassword2" class="sr-only">daily task</label>
+       <input type="text" formControlName="nameoftask"class="form-control"  placeholder="what you should do..">
+     <button type="submit" (click)="onsavetask()" class="btn btn-primary mb-2">save</button>
+</div>   
+</form>
+
+
+<div *ngIf="flag">
+  <div *ngFor="let item of tasks">
+    
+  
+    <p >{{item}}</p>
+      <button  type="submit" class="btn btn-primary">Edit</button>
+      <button  type="submit" class="btn btn-danger">Delete</button>
+      <button  type="submit" class="btn btn-success">Don</button>
+    </div>
+  </div>
