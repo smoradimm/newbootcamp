@@ -1,0 +1,10 @@
+<form  [formGroup]="inputform">
+    
+  <div class="d-flex flex-row">
+   <div class="col-lg-12">     
+    <input type="text" formControlName="name"class="form-control"  placeholder="what you should do..">
+    <input type="text" formControlName="pass"class="form-control"  placeholder="password">
+  <button type="submit" (click)="saveuser()" class="btn btn-primary ">save</button>
+ </div>
+</div>   
+</form>

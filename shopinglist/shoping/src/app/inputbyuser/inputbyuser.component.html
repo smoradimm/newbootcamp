@@ -1,23 +1,25 @@
 <!--  -->
 
-
+<div class="wrapper">
 <form  [formGroup]="inputform">
-    
-     <div class="form-group lg-3 mb-2 form-inline">
-       <label for="inputPassword2" class="sr-only">daily task</label>
+  <div class="form-wrapper">
+    <div class="form-group">
+   
        <input type="text" formControlName="nameoftask"class="form-control"  placeholder="what you should do..">
-     <button type="submit" (click)="onsavetask()" class="btn btn-primary mb-2">save</button>
-</div>   
+    </div>
+       <button type="submit" (click)="onsavetask(0)" class="btn btn-primary ">save</button>
+    </div>
+  
 </form>
 
+</div>
 
-<div *ngIf="flag">
-  <div *ngFor="let item of tasks">
-    
-  
-    <p >{{item}}</p>
-      <button  type="submit" class="btn btn-primary">Edit</button>
-      <button  type="submit" class="btn btn-danger">Delete</button>
-      <button  type="submit" class="btn btn-success">Don</button>
+
+  <div class="task-wrapper" *ngFor="let item of taskshow">
+    <p>{{ item.title }}</p>
+    <div class="actions">
+      <button (click)="Edit(item)" type="submit" class="btn btn-primary">Edit</button>
+      <button (click)="Delet(item.id)" type="submit" class="btn btn-danger">Delete</button>
+      <button (click)="Done(item)" type="submit" class="btn btn-success ">Done</button>
     </div>
   </div>
