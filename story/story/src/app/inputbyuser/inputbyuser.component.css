@@ -1,0 +1,35 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    p {
+        margin: 0;
+      }
+
+    .form-wrapper {
+      display: flex;
+      column-gap: 8px;
+      align-items: center;
+      .form-group {
+        width: 100%;
+      }
+    }
+  
+  }
+
+
+  .task-wrapper {
+    display: flex;
+    /* justify-content: space-between;  */
+    column-gap: 40px;
+
+  
+    p {
+      margin: 0;
+    }
+  
+    .actions {
+      display: flex;
+      column-gap: 10px;
+    }
+  }
