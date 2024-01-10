@@ -5,8 +5,6 @@ import { usermanupolateService } from './usermanupolate.service';
 //import { filter, map } from 'rxjs';
 import {map, filter} from 'rxjs/operators';
 
-
-
 @Component({
   selector: 'app-inputbyuser',
   standalone: true,
