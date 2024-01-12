@@ -34,14 +34,7 @@ nameoftask!:string
         
        this.storess=null
        this.storess=data
-//////////////////////////////////////////
-      //  this.send.showtask().pipe(map(data=>data.story.length>10)).subscribe((data)=>{
-      //   console.log(data);
-        
-      //  this.storess=null
-      //  this.storess=data
 
-/////////////////////////////
       })
     
   }

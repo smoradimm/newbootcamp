@@ -11,7 +11,7 @@ class Database {
       host: 'localhost',
       user: 'root',
       password:'',
-      database: 'personalwallet'
+      database: 'wallet'
     });
   }
 }
