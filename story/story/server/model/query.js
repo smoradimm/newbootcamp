@@ -18,6 +18,13 @@ class query {
     return res[0];
   }
 
+  async change(id) {
+    const query = "select `story` from `stor` where id = ?";    
+        let res = await db.connection.execute(query,[id])
+   
+    return res[0];
+  }
+
 
 
 

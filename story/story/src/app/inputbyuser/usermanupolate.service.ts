@@ -11,6 +11,8 @@ import {map, filter} from 'rxjs/operators';
 export class usermanupolateService
 {
   http=inject(HttpClient)
+  flag=0;
+  storess:any=[];
 
   saveinputtask(story1:any):Observable<any>
   {
@@ -25,14 +27,15 @@ export class usermanupolateService
 
   showtask():Observable<any>
   {   
-    return  this.http.get('http://localhost:4000/api/show',
-    { headers :new HttpHeaders({"Content-Type": "application/json"})} );
+    return  this.http.get('http://localhost:4000/api/show');
+    //.pipe(map((data)=>{data.sli}));
 
   }
 
   edittask(data:any):Observable<any>
   {
     
+   console.log("edit "+data);
    
     
     
@@ -45,6 +48,23 @@ export class usermanupolateService
     
     return  this.http.delete(`http://localhost:4000/api/delet/${id}`);
 
+  }
+  changestory(id:any)
+  {
+    
+
+    console.log("injasssssssssssst"+id);
+    
+
+    this.storess=null
+    return  this.http.get(`http://localhost:4000/api/change/${id}`,{ headers :new HttpHeaders({"Content-Type": "application/json"})});
+   
+     
+  
+  }
+  flagchangestory():any
+  {
+       return this.flag
   }
   
 }

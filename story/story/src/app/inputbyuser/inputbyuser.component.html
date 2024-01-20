@@ -8,29 +8,18 @@
 
 <div class="wrapper">
 <form  [formGroup]="inputform">
-  <div class="form-wrapper">
-    <div class="form-group">
-       <textarea type="textarea" formControlName="story"class="form-control"  placeholder="write your story"><i class="fa fa-car" style="font-size:60px;color:red;"></i></textarea>
-    </div>
-       <button type="submit" (click)="onsavestory()" class="btn btn-primary "><i class="fa fa-check-square"></i></button>
-    </div>
   
+   
+       <textarea type="textarea" formControlName="story"class="form-control"  placeholder="خاطره امروز را اینجا تایپ کنید"><i class="fa fa-car" style="font-size:60px;color:red;"></i></textarea>
+  
+       
+
+    <button type="submit" (click)="onsavestory()"class="btn btn-primary ">ثبت خاطره</button>
 </form>
 
 </div>
 
-<div class="task-wrapper">
-  <div *ngFor="let item of storess">
-    <div class="row mt-3">
-    <div class="actions ">
-      <p>{{ item.story}}</p>
-      
-      <button  (click)="Edit(item.id)"   type="submit" class="btn btn-primary"><i class= "fa fa-pencil"></i></button>	
-      <button (click)="Delet(item.id)" type="submit" class="btn btn-danger" ><i class=" fa fa-trash"></i></button>
-    </div>
-    </div>
-  </div>
-</div>
+
 
 </body>
   </html>

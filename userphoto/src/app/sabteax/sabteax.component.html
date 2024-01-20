@@ -1,0 +1,15 @@
+
+
+        <div>
+           <input type="text" [formControl]="name" placeholder="name of photo" >             
+          <input type="file" id='fileInput' (change)="onFileSelected($event)"/>
+          <button type="button" (click)="uploadFile()" >upload</button>
+        </div>
+        
+
+        <div >
+          <button type="button" (click)="showFiles()" >show images</button>
+        </div>
+       
+   
+      

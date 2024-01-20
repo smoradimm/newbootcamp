@@ -1,0 +1,28 @@
+
+
+
+  .task-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #cef0c9;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+
+
+  
+  
+    .actions {
+      display: flex;
+      column-gap: 10px;
+      background-color: aquamarine;
+    
+    }
+  }

@@ -7,12 +7,22 @@ exports.save=async(req,res)=>{
    res.json(task);
 }
 
-exports.showtask=async(req,res)=>{
+exports.showtask=async(req,res)=>{     
    //console.log(req.body)
    let task= await model.show();
    //console.log(req.body)
    res.json(task);
 }
+
+exports.change=async(req,res)=>{  
+   console.log("dddddddddddddddddddddd")
+   console.log(req.params.id)
+   let task= await model.change(req.params.id);  ////////////////////////////////////
+   //console.log(req.body)
+   res.json(task);
+}
+
+
 
 exports.delet=async(req,res)=>{
    
